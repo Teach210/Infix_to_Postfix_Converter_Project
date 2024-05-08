@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Infix_to_Postfix_Converter_Project.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="converter.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

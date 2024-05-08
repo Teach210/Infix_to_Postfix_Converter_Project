@@ -1,9 +1,22 @@
-// Infix_to_Postfix_Converter_Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include "converter.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    InfixToPostfixConverter converter;
+    std::string expressions[] = {
+        "A + B - C",
+        "(A + B) * C",
+        "(A + B) * (C - D)",
+        "A + ((B + C) * (E - F) - G) / (H - I)",
+        "A + B * (C + D) - E / F * G + H"
+    };
+
+    for (const std::string& infix : expressions) {
+        converter.Convert(infix);
+        std::cout << "Infix Expression: " << infix << ";\n";
+        std::cout << "Postfix Expression: " << converter.GetPostfixExpression() << "\n\n";
+    }
+
+    return 0;
 }
